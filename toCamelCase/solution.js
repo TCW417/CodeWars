@@ -3,15 +3,13 @@
 
 function toCamelCase(str){
   let rstr = '';
-  let i = 0;
-  while (i < str.length) {
+  for (let i = 0; i < str.length; i++) {
     if (str[i] === '-' || str[i] === '_') {
       i++;
       rstr += str[i].toUpperCase();
     } else {
       rstr += str[i];
     }
-    i++;
   }
   return rstr;
 }
